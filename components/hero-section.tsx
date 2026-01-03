@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import RotatingText from "./RotatingText"
+import Image from "next/image"
 
 const ArrowRight = () => (
   <svg
@@ -30,7 +31,21 @@ const Play = () => (
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero-bg.jpg"
+          alt="Hero background"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Black mask overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/80"></div>
+      </div>
+      
       <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-hero">
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8 mt-12 animate-fade-in-badge">
