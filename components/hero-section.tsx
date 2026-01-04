@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import RotatingText from "./RotatingText"
 import Image from "next/image"
 
 const ArrowRight = () => (
@@ -43,7 +42,7 @@ export function HeroSection() {
           quality={90}
         />
         {/* Black mask overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-hero">
@@ -55,29 +54,16 @@ export function HeroSection() {
 
         {/* Main Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-6 animate-fade-in-heading">
-          <span className="text-foreground">Elevate your</span>
+          <span className="text-foreground">The OS for Construction</span>
           <br />
           <span className="inline-flex items-center justify-center flex-wrap gap-2 mt-4 sm:mt-6 md:mt-8">
-            <span className="text-foreground">Business</span>
-            <RotatingText
-              texts={["Growth", "Innovation", "Efficiency", "Success", "Performance"]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg shadow-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-1 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2000}
-            />
+            <span className="px-2 sm:px-2 md:px-3 bg-white text-black overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg shadow-lg">Supply chain</span>
           </span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-base sm:text-xl md:text-2xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
-          Cliste helps Irish businesses save time and boost revenue with smart chat, workflows and automations, fully
-          managed for you.
+        <p className="text-base sm:text-l md:text-xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
+        Construction errors shouldn't be "part of the job." Intellibyld captures every failure point and autonomously re-engineers your process so it never happens again.
         </p>
 
         {/* CTA Buttons */}
